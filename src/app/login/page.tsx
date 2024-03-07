@@ -39,7 +39,7 @@ export default function LoginPage() {
                     <input value={user.password} onChange={(e) => setUser({...user, password:e.target.value})} className="px-2 py-2 rounded-lg outline-none text-xl " type="password" placeholder="Password..." name="password" id="" />
                 </div>
                 <button onClick={loginUser} className="mt-4 w-full bg-white py-2 rounded-lg text-xl font-semibold   hover:bg-black hover:text-white   hover:cursor-pointer">LOGIN</button>
-                <p className="mt-2 text-sm">Don't have account? <Link className="text-xl underline " href={'/register'}>Register</Link></p>
+                <p className="mt-2 text-sm">Do not have account? <Link className="text-xl underline " href={'/register'}>Register</Link></p>
             </div>
         </div>
         </>
