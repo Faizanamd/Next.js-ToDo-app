@@ -6,7 +6,10 @@ import jwt from 'jsonwebtoken';
 export async function POST(request:NextRequest) {
     try {
         const {email, password} = await request.json();
-        const checkUser = await UserModel.findOne({email:email});
+        console.log(email+" "+password);
+        const checkUser = await UserModel.findOne({ email: email });
+
+        console.log(checkUser)
         if(!checkUser){
            return NextResponse.json({status:false, message:"User doesn't exist"})
         }
