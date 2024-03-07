@@ -5,7 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
-export default function loginPage() {
+export default function LoginPage() {
     const [user, setUser] = useState({email:"", password:""});
     const router = useRouter();
     const loginUser = async() =>{
