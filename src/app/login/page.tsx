@@ -5,9 +5,9 @@ import Link from "next/link";
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
-export default function LoginPage() {
-    const [user, setUser] = useState({email:"", password:""});
+const LoginPage = () => {
     const router = useRouter();
+    const [user, setUser] = useState({email:"", password:""});
     const loginUser = async() =>{
         try {
             const {data} = await axios.post("/api/users/login", user);
@@ -45,3 +45,4 @@ export default function LoginPage() {
         </>
     )
 }
+export default LoginPage;

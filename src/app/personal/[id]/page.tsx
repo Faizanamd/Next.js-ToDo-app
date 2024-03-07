@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
-export default function personalPage({ params }: any) {
+export default function PersonalPage({ params }: any) {
     const router = useRouter();
     const [task, setTask] = React.useState({ title: "", description: "" });
     const [userTask, setUserTask] = useState<any>([]);
